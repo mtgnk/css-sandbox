@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #EEE;
+        }
+        .center {
+            text-align: center;
+            margin: auto;
+        }
+
+        #tamagon-kuchi {
+            animation: updown;
+            animation-duration: 1s;
+            transform-origin: center;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes updown {
+            from {
+                transform: translateY(-8%)
+            }
+            to {
+                transform: translateY(10%)
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <h1 class="center">たまごん</h1>
+    <!-- <div id="test"></div> -->
+    <div class="center">
+    <!-- 高さを変えたので読み込んだ場合と異なって、表示される -->
+    <svg id="test" width="134" height="160" viewBox="0 0 134 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="tamagon">
+        <path id="Ellipse 1" d="M134 68C134 59.0701 132.267 50.2277 128.9 41.9775C125.533 33.7274 120.598 26.2311 114.376 19.9167C108.155 13.6024 100.769 8.59351 92.6398 5.17619C84.511 1.75887 75.7986 -3.90338e-07 67 0C58.2014 3.90338e-07 49.489 1.75887 41.3602 5.17619C33.2314 8.59351 25.8454 13.6024 19.6238 19.9167C13.4023 26.2311 8.46713 33.7274 5.10007 41.9775C1.733 50.2277 -7.69195e-07 59.0701 0 68L67 68H134Z" fill="#CCD012" fill-opacity="0.63"/>
+        <path id="tamagon-kuchi" d="M134 77.3653C134 91.6203 126.941 105.291 114.376 115.371C101.811 125.451 84.7695 131.114 67 131.114C49.2305 131.114 32.1888 125.451 19.6239 115.371C7.05891 105.291 2.68312e-06 91.6203 0 77.3653L67 77.3653H134Z" fill="#CCD012" fill-opacity="0.63"/>
+        <ellipse id="Ellipse 2" cx="29.48" cy="49.6766" rx="10.184" ry="10.5868" fill="black"/>
+        <ellipse id="Ellipse 3" cx="106.664" cy="49.6766" rx="10.184" ry="10.5868" fill="black"/>
+        </g>
+    </svg>
+    <img src="tamagon.svg" alt="">
+    <span>てｓ</span>
+    </div>
+        
+</body>
+<script>
+    var $ = function(id){
+        return document.getElementById(id)
+    }
+    $('tamagon-kuchi').addEventListener("click",()=>{
+        alert('test')
+    })
+</script>
+</html>
